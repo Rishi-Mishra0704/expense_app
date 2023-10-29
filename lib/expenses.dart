@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 
-class Expenses extends StatefulWidget{
+class Expenses extends StatefulWidget {
   const Expenses({super.key});
   @override
-  State<StatefulWidget> createState(){
+  State<StatefulWidget> createState() {
     return _ExpensesState();
   }
 }
 
-class _ExpensesState extends State<Expenses>{
-
-
+class _ExpensesState extends State<Expenses> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text('Expenses'),
+      body: Column(
+        children: const [
+          Text('Expenses chart'),
+          Text('Expenses list'),
+        ],
       ),
     );
   }
