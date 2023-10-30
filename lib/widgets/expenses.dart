@@ -39,7 +39,7 @@ class _ExpensesState extends State<Expenses> {
       body: Column(
         children: [
           AppBar(
-            title: const Text('Expenses'),
+            title: const Text('Expense Tracker'),
             actions: [
               IconButton(
                 onPressed: () {},
