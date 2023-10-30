@@ -14,11 +14,13 @@ class _NewExpenseState extends State<NewExpense> {
   final _amountController = TextEditingController();
 
   void _presentDatePicker() {
+    final now = DateTime.now();
+    final firstDate = DateTime(now.year - 1, now.month, now.day);
     showDatePicker(
       context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now().subtract(const Duration(days: 365)),
-      lastDate: DateTime.now(),
+      initialDate: now,
+      firstDate: firstDate,
+      lastDate: now,
     );
   }
 
