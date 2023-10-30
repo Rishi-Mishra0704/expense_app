@@ -33,6 +33,13 @@ class _ExpensesState extends State<Expenses> {
     ),
   ];
 
+  void _openAddExpenseModal() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => const Text('Add Expense'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +49,7 @@ class _ExpensesState extends State<Expenses> {
             title: const Text('Expense Tracker'),
             actions: [
               IconButton(
-                onPressed: () {},
+                onPressed: _openAddExpenseModal,
                 icon: const Icon(Icons.add),
               ),
             ],
