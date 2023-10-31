@@ -4,7 +4,6 @@ import 'package:expense_tracker/models/expense.dart';
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 
-
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
   @override
@@ -38,8 +37,14 @@ class _ExpensesState extends State<Expenses> {
   void _openAddExpenseModal() {
     showModalBottomSheet(
       context: context,
-      builder: (ctx) => const NewExpense(),
+      builder: (ctx) => NewExpense(onAddExpense: _addExpense),
     );
+  }
+
+  void _addExpense(Expense expense) {
+    setState(() {
+      _registeredExpenses.add(expense);
+    });
   }
 
   @override
