@@ -29,7 +29,7 @@ void main() {
               titleLarge: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.normal,
-                color: kColorScheme.onPrimary,
+                color: kColorScheme.onPrimaryContainer,
               ),
             ),
       ),
